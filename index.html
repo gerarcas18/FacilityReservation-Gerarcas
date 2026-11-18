@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FacilityFlow | Facility Reservation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div id="login" class="login">
+    <form id="loginForm">
+      <div class="logo">F</div>
+      <small>CAMPUS OPERATIONS</small>
+      <h1>FacilityFlow</h1>
+      <p>Role-Based Facility Reservation &amp; Approval</p>
+      <label>Email<input id="email" type="email" autocomplete="username" required></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Sign in</button>
+      <p id="error" class="error" role="alert" aria-live="polite"></p>
+    </form>
+  </div>
+  <div id="app" class="app hidden">
+    <aside>
+      <h2>◈ FacilityFlow</h2>
+      <p id="identity"></p>
+      <nav id="nav"></nav>
+      <button id="logout" class="out" type="button">Sign out</button>
+    </aside>
+    <main>
+      <header><small>FACILITY OPERATIONS</small><h1 id="title">Overview</h1></header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
